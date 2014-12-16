@@ -10,7 +10,7 @@
     <groupId>com.poolingpeople.neo4j</groupId>
     <artifactId>api</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>JCA File API</name>
+    <name>JCA Neo4j Client API</name>
     <dependencies>
     </dependencies>
     <build>
