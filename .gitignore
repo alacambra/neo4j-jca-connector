@@ -1,0 +1,8 @@
+# Created by .gitignore support plugin (hsz.mobi)
+.idea
+client/nb-configuration.xml
+clientconnector.iml
+api/nb-configuration.xml
+api/api.iml
+client/client.iml
+connector/connector.iml
