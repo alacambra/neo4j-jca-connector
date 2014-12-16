@@ -1,14 +1,8 @@
-package com.abien.filestore;
+package com.poolingpeople.neo4j;
 
 //import com.sun.jersey.api.client.Client;
 //import com.sun.jersey.api.client.ClientResponse;
 //import com.sun.jersey.api.client.WebResource;
-import org.junit.AfterClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import static org.hamcrest.CoreMatchers.*;
 
 /**
  *

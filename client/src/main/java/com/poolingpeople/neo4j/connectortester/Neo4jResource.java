@@ -1,4 +1,4 @@
-package com.abien.filestore;
+package com.poolingpeople.neo4j.connectortester;
 
 import com.poolingpeople.neo4j.Neo4jClientFactory;
 
@@ -23,7 +23,7 @@ import javax.ws.rs.core.MediaType;
 @Produces(MediaType.APPLICATION_JSON)
 public class Neo4jResource {
 
-    @Resource(name = "java:/eis/HelloWorld")
+    @Resource(name = "java:/eis/neo4j/restTx")
     Neo4jClientFactory factory;
 
     @PostConstruct

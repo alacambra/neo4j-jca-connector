@@ -16,6 +16,7 @@ limitations under the License.
 package com.poolingpeople.neo4j.connector;
 
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 import javax.naming.Reference;
 import javax.resource.ResourceException;
 import javax.resource.spi.ConnectionManager;
@@ -30,18 +31,17 @@ public class Neo4jRestClientFactory implements Neo4jClientFactory {
     private ManagedConnectionFactory mcf;
     private Reference reference;
     private ConnectionManager cm;
-    private PrintWriter out;
+    private Logger logger = Logger.getLogger(this.getClass().getName());
 
     public Neo4jRestClientFactory(ManagedConnectionFactory mcf, ConnectionManager cm) {
-        out.println("#Neo4jRestClientFactory");
+        logger.info("#Neo4jRestClientFactory");
         this.mcf = mcf;
         this.cm = cm;
-        this.out = out;
     }
 
     @Override
     public Neo4jClient getClient(){
-        out.println("#Neo4jRestClientFactory.getConnection " + this.cm + " MCF: " + this.mcf);
+        logger.info("#Neo4jRestClientFactory.getConnection " + this.cm + " MCF: " + this.mcf);
         try {
             return (Neo4jClient) cm.allocateConnection(mcf, getConnectionRequestInfo());
         } catch (ResourceException ex) {
